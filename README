@@ -1,0 +1,25 @@
+
+/* Developer of the simulator: Mr. Shankar Kumar Ghosh, Senior Research Fellow, Advanced computing & Microelectronics Unit, Indian Statistical Institute */
+
+This is a system level simulator which facilitates the evaluation of basic features of different handover techniques in 
+LTE-A heterogeneous networks. In order to create the network topology, specify the co-ordinates of the base stations using "create_topology()" function of simulator.cpp file.
+Specify the data rate request, number of mobile terminals, call arrival rate of CBR traffic, type of handover, modulation technique and other system 
+parameters in "macro.h" file. In order to run the simulator, just enter into the folder containing the source code and 
+type "g++ -std=c++11 simulator.cpp" from command prompt.
+
+The simulator consists of several classes. Brief description of each classes are given below.
+
+The UE class (contained in UEclass.h) configures different UE parameters such as position of the UEs, velocity and mobility. 
+
+The handoff_protocol class (contained in enBclass.h) facilitates the implementation of different handover execution mechanisms (e.g. hard and semisoft) and different networks selection mechanisms (e.g. RSS based and SINR based). Using this class, handover threshold can also be specified.
+
+Using enB class, different parameters of the deployed enBs such as position and redius can be specified. This class also facilitates the use of different pathloss models through "pathloss()" functions. The enB class inherits the "handoff_protocol" class.
+
+The "Received_signal_strength" class (contained in RSSclass.h) and "Received_SINR" class (contained in SINRclass.h) facilitates RSS and SINR measurements. 
+
+
+ 
+
+
+
+
